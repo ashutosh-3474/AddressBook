@@ -44,6 +44,7 @@ public class Main {
             else if(choice == 4)
             {
                 //delete existing contact from the address book
+                addressBook.deleteContact();
             }
             else if(choice == 5)
             {

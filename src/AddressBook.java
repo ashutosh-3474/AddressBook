@@ -92,7 +92,36 @@ public class AddressBook {
                 contact.setAddress(address);
                 contact.setCity(city);
                 contact.setZipCode(zipCode);
+
+                System.out.println("Contact edited successfully");
             }
+        }
+    }
+
+    //function to delete existing contact
+    public void deleteContact()
+    {
+        //input detail of the contact to delete
+        System.out.println("Enter First name of the contact to delete");
+        String firstName = sc.nextLine();
+
+        Contact toRemove = null;
+
+        for (Contact contact : contacts) {
+            if (contact.getFirstName().equalsIgnoreCase(firstName)) {
+                System.out.println("Match Found");
+                toRemove = contact;
+                break;
+            }
+        }
+
+        if (toRemove != null) {
+            System.out.println("Contact Deleted Successfully");
+            contacts.remove(toRemove);
+        }
+        else
+        {
+            System.out.println("Contact does not exist");
         }
     }
 }

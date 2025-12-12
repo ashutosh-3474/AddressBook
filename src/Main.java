@@ -23,32 +23,33 @@ public class Main {
 
             if(choice == 1)
             {
-                System.out.print("Enter First name: ");
-                String firstName = sc.nextLine();
-
-                System.out.print("Enter Last name: ");
-                String lastName = sc.nextLine();
-
-                System.out.print("Enter phone number: ");
-                String phoneNumber = sc.nextLine();
-
-                System.out.print("Enter email address: ");
-                String email = sc.nextLine();
-
-                System.out.println("Enter address details:");
-                String address = sc.nextLine();
-
-                System.out.println("Enter City:");
-                String city = sc.nextLine();
-
-                System.out.println("Enter State:");
-                String state = sc.nextLine();
-
-                System.out.println("Enter Zip Code:");
-                String zipCode = sc.nextLine();
-
-                Contact contact = new Contact(firstName,lastName, phoneNumber, email, address, city, state, zipCode);
-                addressBook.addContact(contact);
+                addressBook.addContact();
+//                System.out.print("Enter First name: ");
+//                String firstName = sc.nextLine();
+//
+//                System.out.print("Enter Last name: ");
+//                String lastName = sc.nextLine();
+//
+//                System.out.print("Enter phone number: ");
+//                String phoneNumber = sc.nextLine();
+//
+//                System.out.print("Enter email address: ");
+//                String email = sc.nextLine();
+//
+//                System.out.println("Enter address details:");
+//                String address = sc.nextLine();
+//
+//                System.out.println("Enter City:");
+//                String city = sc.nextLine();
+//
+//                System.out.println("Enter State:");
+//                String state = sc.nextLine();
+//
+//                System.out.println("Enter Zip Code:");
+//                String zipCode = sc.nextLine();
+//
+//                Contact contact = new Contact(firstName,lastName, phoneNumber, email, address, city, state, zipCode);
+//                addressBook.addContact(contact);
             }
             else if(choice == 2)
             {

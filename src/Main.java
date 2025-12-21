@@ -39,8 +39,15 @@ public class Main {
         //welcome message
         System.out.println("Welcome to the address book program");
 
-        //object of addressbook class
-        AddressBook addressBook = new AddressBook();
+        //object of addressbookCollections class
+        AddressBookCollection addressBookCollection = new AddressBookCollection();
+
+        //Added new address book to the collection
+        addressBookCollection.addAddressBook("GEVernova");
+
+        //Get and stored the address book of ge vernova
+        AddressBook addressBook = addressBookCollection.getAddressBook("GEVernova");
+        System.out.println("Selected address book: GE Vernova, continue to your task:");
 
         //continuous loop that provide option to add edit and delete contact in the addressbook
         while(true)
@@ -56,6 +63,7 @@ public class Main {
 
             //input for the choice
             int choice = sc.nextInt();
+            sc.nextLine();
 
             if(choice == 1)
             {

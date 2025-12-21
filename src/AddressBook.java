@@ -23,35 +23,12 @@ public class AddressBook {
     }
 
     //function to add contact to the contacts list in the address book
-    public void addContact()
+    public void addContact(Contact contact)
     {
-        System.out.print("Enter First name: ");
-        String firstName = sc.nextLine();
-
-        System.out.print("Enter Last name: ");
-        String lastName = sc.nextLine();
-
-        System.out.print("Enter phone number: ");
-        String phoneNumber = sc.nextLine();
-
-        System.out.print("Enter email address: ");
-        String email = sc.nextLine();
-
-        System.out.print("Enter address details:");
-        String address = sc.nextLine();
-
-        System.out.print("Enter City:");
-        String city = sc.nextLine();
-
-        System.out.print("Enter State:");
-        String state = sc.nextLine();
-
-        System.out.print("Enter Zip Code:");
-        String zipCode = sc.nextLine();
-
-        Contact contact = new Contact(firstName,lastName, phoneNumber, email, address, city, state, zipCode);
         contacts.add(contact);
     }
+
+
 
     //function to edit contact that already exit in the address book
     public void editContact()

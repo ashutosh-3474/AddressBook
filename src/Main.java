@@ -2,9 +2,40 @@ import java.util.Scanner;
 
 //main class
 public class Main {
+    static Scanner sc = new Scanner(System.in);
+
+    //Method to take contact details input from the user
+    public static Contact getContact()
+    {
+        System.out.print("Enter First name: ");
+        String firstName = sc.nextLine();
+
+        System.out.print("Enter Last name: ");
+        String lastName = sc.nextLine();
+
+        System.out.print("Enter phone number: ");
+        String phoneNumber = sc.nextLine();
+
+        System.out.print("Enter email address: ");
+        String email = sc.nextLine();
+
+        System.out.print("Enter address details:");
+        String address = sc.nextLine();
+
+        System.out.print("Enter City:");
+        String city = sc.nextLine();
+
+        System.out.print("Enter State:");
+        String state = sc.nextLine();
+
+        System.out.print("Enter Zip Code:");
+        String zipCode = sc.nextLine();
+
+        Contact contact = new Contact(firstName,lastName, phoneNumber, email, address, city, state, zipCode);
+
+        return contact;
+    }
     public static void main(String[] args) {
-        //instance of scanner class
-        Scanner sc = new Scanner(System.in);
         //welcome message
         System.out.println("Welcome to the address book program");
 
@@ -29,7 +60,8 @@ public class Main {
             if(choice == 1)
             {
                 //add contact to the address book
-                addressBook.addContact();
+                Contact contact = getContact();
+                addressBook.addContact(contact);
             }
             else if(choice == 2)
             {
